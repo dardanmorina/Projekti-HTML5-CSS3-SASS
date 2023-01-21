@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
+@import 'variables';
+@import 'base';
+@import 'mixins';
+
+//START-BACKGROUND
+.background{
+    background-image: url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    header{
+        padding: 15px 0;
+        
+        .container{
+            height: 70px;
+            @include flexSbA;
+        }  
+
+        nav{
+            width: 30%;
+            margin-left: 100px;
+            display: block;
+            
+            ul{
+                list-style-type: none;
+                @include flexSbA;
+            }
+
+            a{
+                text-decoration: none;
+                color: $cwhite;
+                transition: all 0.3s ease-in-out;
+
+                &:hover{
+                    color: $corange;
+                }
+            }
+            .active{
+                color: $corange;
+            }
+        }
+
+        .user{
+            @include flexSbA;
+            display: block;
+
+            a{
+                margin: 0 10px;
+                transition: all 0.3s ease-in-out;
+                
+                i{
+                    &:hover{
+                        color: $corange;
+                    }
+                }
+            }
+        }
+        .menu-img{
+            display: none;
+        }
+    }
+
+    //START MAIN
+    main{
+        width: 100%;
+
+        .container{
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 100px;
+        }
+
+        .detail-box{
+            width: 48%;
+
+            h1{
+                font-size: 3.5rem;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            
+            p{
+                font-size: 14px;
+            }
+
+            a{
+                margin-top: 25px;
+            }
+        }
+        
+    }
+}
+
+//START OFFER-SECTION
+.offer{
+    padding: 70px 0 80px 0;
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .offer-box{
+        background-color: $cblack;
+        display: flex;
+        align-items: center;
+        width: 45%;
+        margin-top: 45px;
+        border-radius: 15px;
+        padding: 20px 15px;
+
+        img{
+            width: 175px;
+            height: 175px;
+            margin-right: 15px;
+            border-radius: 100%;
+            border: 5px solid $corange;
+        }
+
+       h5{
+            font-family: $fdancingscript;
+            font-size: 24px;
+            margin: 0;
+       }
+       h6{
+            font-family: $fdancingscript;
+            margin: 10px 0;
+
+            span{
+                font-size: 2.5rem;
+                font-weight: bold;
+                font-family: $fdancingscript;
+            }
+       }
+    }
+}
+
+//START OUR-MENU-SECTION
+.our-menu{
+    padding: 20px 0 20px 0;
+
+    h2{
+        text-align: center;
+    }
+
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    li{
+        padding: 20px;
+
+        a{
+            text-decoration: none;
+            color: $cblack;
+            padding: 5px 15px;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+           
+            &:hover{
+                background-color: $cblack;
+                color: $cwhite;
+            }
+    
+        }
+
+        .active{
+            color: $cwhite;
+            background-color: $cblack;
+        }
+    }
+
+    .our-menu-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .cards-detail{
+        padding: 20px;
+
+        h5{
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+        
+        .price{
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h6{
+            font-size: 1rem;
+        }
+
+        a{
+            background-color: $corange;
+            padding: 8px 15px;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                background-color: #c0870d;
+            }
+        }
+    }
+    
+    .button{
+        margin-top: 45px;
+        display: flex;
+        justify-content: center;
+    }    
+
+}
+
+//START OUR-MENU-SECTION
+.about{
+    background-color: $cblack;
+    color: $cwhite;
+    margin: 70px 0;
+
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    img{
+        max-width: 445px;
+        padding: 50px 0;
+    }
+
+    .content{
+        margin-left: 90px;
+
+        h2{
+            margin-bottom: 15px;
+        }
+
+        a{
+            margin-top: 30px;
+        }
+    }
+}
+
+//START BOOK-SECTION
+.book{
+    margin: 30px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .book-form{
+        padding-right: 25px;
+
+        h2{
+            margin-bottom: 20px;
+        }
+
+        input{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 25px;
+            padding: 0 25px;
+            border: 1px solid #999;
+            color: $cblack;
+            border-radius: 5px;
+        }
+    }
+
+    .map{
+        margin-top: 80px;
+        width: 100%;
+        height: 345px;
+        border-radius: 10px;
+        overflow: hidden
+     }
+}
+
+//START OUR-CLIENT-SECTION
+.our-client{
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    h2{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .client{
+        width: 48%;
+    }
+
+    .client-detail{
+        background-color: $cblack;
+        border-radius: 5px;
+        padding: 20px 15px 20px 20px;
+    }
+
+    p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    h6{
+        font-weight: 600;
+        font-size: 18px;
+        margin: 15px 0 5px 0;
+    }
+
+    .img-clients{
+        margin-top: 30px;
+
+        img{
+            width: 25%;
+            border: 5px solid $corange;
+            border-radius: 50%;
+        }
+    }
+    
+   .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+
+        .btn{
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+   }
+}
+
+//START FOOTER
+footer{
+    background-color: $cblack;
+    padding: 70px 0 60px 0;
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+    }
+    
+    h4{
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    p{
+        padding: 10px 0;
+    }
+
+    a{
+        color: $cwhite;
+        text-decoration: none;
+        padding: 5px 0;
+
+        &:hover{
+            color: $corange;
+        }
+    }
+    .social-media{
+        padding-top: 20px;
+
+        a{
+            background-color: $cwhite;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        .fa{
+            color: $cblack;
+        }
+    }
+}
+
+//MOBILE VERSION (media query)
+@media screen and (max-width: 768px) {
+    .background{
+        header{
+            .container{
+    
+                img{
+                    height: 50px;
+                }
+    
+                nav{
+                    display: none;
+                }
+        
+                .user{
+                    display: none;
+                }
+                
+                .menu-img{
+                    display: block;
+                    width: 35px;
+                    height: 40px;
+                    background-image: url(../images/menu-icon.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+    
+                    &:hover{
+                        background-image: url(../images/menu-icon-hover.PNG);
+                    }
+                }
+            }
+        }
+    
+        main{
+            width: 100%;
+    
+            .container{
+                display: flex;
+                justify-content: flex-start;
+                padding-top: 50px;
+    
+                .detail-box{
+                    width: 100%;
+        
+                    h1{
+                        font-size: 2.6rem;
+                        font-weight: bold;
+                        margin-bottom: 15px;
+                    }
+                    
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .offer{
+        padding: 70px 0 80px 0;
+        .container{
+            display: block;
+
+        }
+    
+        .offer-box{
+            background-color: $cblack;
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin-top: 45px;
+            border-radius: 15px;
+            padding: 20px 15px;
+    
+        }
+    }
+
+    .our-menu{
+        padding: 20px 0 20px 0;
+    
+        h2{
+            text-align: center;
+        }
+    
+        ul{
+            list-style-type: none;
+            display: flex;
+
+            li{
+                padding: 0px;
+        
+                a{
+                    padding: 5px 10px;
+                }
+            }
+        }
+    
+        .our-menu-grid{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+        }
+    }
+
+    .about{
+        
+        .container{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    
+        .content{
+            margin-left: 0px;
+            padding-top: 60px;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .book{
+        .container{
+            display: block;
+        }
+        .book-form{
+            padding-right: 25px;
+        }
+    
+        .map{
+            margin-top: 40px;
+        }
+    }
+
+    .our-client{
+
+        .container{
+            display: block;
+        }
+    
+        .client{
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+
+    footer{
+        background-color: $cblack;
+    
+        .container{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4 , 1fr);
+            text-align: center;
+        }
+        .opening-hours{
+            padding-top: 50px;
+        }
+
+    }
+}

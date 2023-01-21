@@ -1,0 +1,87 @@
+*{
+    font-family: $fopensans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+p{
+    color: $cwhite;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: $fdancingscript;
+    color: $cwhite;
+}
+h4{
+    font-family: $fdancingscript;
+    color: $cwhite;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: $fdancingscript;
+}
+
+h5,h6{
+    font-family: $fopensans;
+    color: $cwhite;
+}
+
+.container{
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 35px;
+    background-color: $corange;
+    color: $cwhite;
+    border-radius: 45px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    border: none;
+
+    &:hover{
+        background-color: #c0870d;
+    }
+}
+.cards{
+    margin-top: 25px;
+    color: $cwhite;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
+
+    .card-img{
+        display: flex;
+        justify-content: center;
+        height: 215px;
+        padding-top: 25px;
+        border-radius: 0 0 0 45px;
+        background-color: $clight-gray;
+
+        img{
+            width: 50%;
+            height: 160px
+        }
+    }
+}
+
+.fa{
+    color: $cwhite;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
