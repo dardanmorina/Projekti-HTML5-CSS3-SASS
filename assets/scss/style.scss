@@ -493,7 +493,7 @@ footer{
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(5, 1fr);
         }
-        .our-menu-grid:nth-child(9){
+        .cards:nth-child(9){
             grid-column: 1 / 3;
         }
     }
